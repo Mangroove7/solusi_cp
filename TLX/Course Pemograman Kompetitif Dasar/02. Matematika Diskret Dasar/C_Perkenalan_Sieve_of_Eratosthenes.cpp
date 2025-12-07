@@ -6,7 +6,7 @@ vector <bool>sieve(n,true);
 vector <int> banyak_prima;
 void isi_prima(){
     sieve[0] = false;
-    sieve[1] = true;
+    sieve[1] = false;
     for(int i = 2;i * i <= n;i++){
         if(sieve[i]){
             for(int p = i * i;p <= n;p += i){
@@ -21,7 +21,7 @@ void isi_prima(){
 
 void solve(){
     int k;cin >> k;
-    cout << banyak_prima[k] << '\n';
+    cout << banyak_prima[k-1] << '\n';
 }
 int main(){
     isi_prima();
