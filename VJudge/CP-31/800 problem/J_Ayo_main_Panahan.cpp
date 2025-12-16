@@ -15,12 +15,11 @@ vector <vector <int>> poin =
     {1,1,1,1,1,1,1,1,1,1}
 };
 void solve() {
-    vector <vector <char>> panah(10,vector <char>(10));
     int skor = 0;
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
-            cin >> panah[i][j];
-            if(panah[i][j] == 'X')skor += poin[i][j];
+            char x;cin >> x;
+            if(x == 'X')skor += poin[i][j];
         }
     }
     cout << skor << endl;
