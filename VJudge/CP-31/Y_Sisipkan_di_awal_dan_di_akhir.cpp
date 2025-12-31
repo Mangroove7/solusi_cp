@@ -2,15 +2,13 @@
 using namespace std;
 
 void solve() {
-    int n;cin >> n;
-
-    int result = 0; 
+    string s;cin >> s;
+    int cnt = 0;
     for (int i = 0; i < n; i++) {
-        int x; cin >> x;
-        result ^= x; 
+        if((s[i] == '0' && s[n - 1 - i] == '1') || (s[i] == '1' && s[n - 1 -i] == '0'))continue;
+        cnt++;
     }
-    (n % 2 != 0)?cout << result << endl:(result == 0)?cout << result << endl:cout << -1 << endl;
-
+    cout << cnt << endl;
 }
 
 int main() {
