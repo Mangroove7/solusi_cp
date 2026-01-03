@@ -2,22 +2,24 @@
 using namespace std;
 
 void solve() {
-    //jika k = 1 cek jika array sudah sorted jika > 1 maka pasti bisa.
     int n,k;cin >> n >> k;
     vector <int> a(n);
     for (int i = 0; i < n; i++) {
-            cin >> a[i];
-        }
-
-    if(k > 1)cout << "YES\n";
+        cin >> a[i];
+    }
+    if(k > 1){
+        cout << "YES\n";
+    }
     else if(k == 1){
-        vector <int> b(n);
-        b = a;
-        sort(b.begin(),b.end());
-        if(a == b){
+        vector <int> cek_arr;
+        cek_arr = a;
+        sort(cek_arr.begin(),cek_arr.end());
+        if(a == cek_arr){
             cout << "YES\n";
+
+        }else{
+            cout << "NO\n";
         }
-        else cout << "NO\n";
     }
 }
 
