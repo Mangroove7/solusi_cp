@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+//suatu array dijamin bisa disort apabila kita membandingkan >= 2 elemen (ini relasinya ke bubble sort)
+//artinya jika k == 1 maka kita tidak bisa mensort suatu array sehingga kita hanya perlu mengecek apakah array tersebut 
+//sudah diurutkan sedari awal
+
 void solve() {
     int n,k;cin >> n >> k;
     vector <int> a(n);
