@@ -38,6 +38,7 @@ Untuk mempermudah navigasi, repo ini dibagi menjadi beberapa direktori utama:
     * `./TLX`: Kumpulan solusi dari TOKI Learning Center (TLX).
     * `./cses`: Kumpulan solusi dari CSES Problem Set.
     * `./VJudge`: Kumpulan solusi dari VJudge.
+    * `./VJudge/CP31` : Kumpulan soal dari CP-31 Sheet by Priyansh yang saya buat ulang dalam bentuk kontes vjudge sehingga ada perubahaan dinama namun solusi & soal sama
     * *(Dan platform lainnya)*
 * **Pelajaran & Template Algoritma:**
     * `./algo_list`: Berisi kumpulan *template* dan implementasi algoritma dasar yang sering digunakan dalam CP (contoh: *Sieve of Eratosthenes*, Pengecekan Bilangan Prima, dll.).
