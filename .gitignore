@@ -1,1 +1,10 @@
-.*
+# Mengabaikan semua folder .vscode di subfolder mana pun
+**/.vscode/
+**/.cph/
+**/.cph-ng/
+# Mengabaikan semua file .exe di subfolder mana pun
+**/*.exe
+
+# Jika ada folder bin/ atau build/ hasil compile
+**/bin/
+**/build/
