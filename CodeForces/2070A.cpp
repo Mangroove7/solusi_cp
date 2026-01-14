@@ -48,48 +48,10 @@ typedef unsigned long long int  uint64;
 
 
 void solve() {
-    int64 n,k;cin >> n >> k;
-    queue<int64> antrian;
-    //kita gunakan pendekatan pencarian/traverse secara BFS
-    si proses;
-    int waktu = 0;
-    //mula-mula masukkan n di antrian
-    antrian.push(n);
-    //jika n == k maka langkah yang dibutuhkan adalah 0;
-    if(n == k){cout << 0 << endl;return;}
-    // lakukan traversing/pencarian
-    else while(!antrian.empty()){
-        int besar = antrian.size();
-        waktu++;
-        for (int i = 0; i < besar; i++) {
-            int64 curr = antrian.front();
-            antrian.pop();
-            //implementasi dan masukkan ke antrian a (ceil(curr / 2)) dan b (floor(curr / 2))
-            int64 a = (curr + 1)/ 2;
-            int64 b = curr / 2;
-            if(a == k || b == k){
-                cout << waktu << endl;
-                return;
-            }
-            else{
-                if(proses.count(a) < 1 && a > k){
-                    proses.insert(a);
-                    
-                    antrian.push(a);
-                    
-                }
-                if(proses.count(b) < 1 && b > k){
-                    proses.insert(b);
-                    
-                    antrian.push(b);
-                    
-                }
-            }
-        }
-        //break karna pada saat node ke 30+ sudah mencapai limit 1e9
-        if(waktu > 40) break;
-    }
-    cout << -1 << endl;
+    int64 n;cin >> n;
+    int ans = (n / 15) * 3;
+    
+    cout << ans + min(3,n % 15 + 1) << endl;
 }
 
 int main() {

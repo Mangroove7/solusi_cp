@@ -50,6 +50,11 @@ typedef unsigned long long int  uint64;
 
 void solve() {
     int n;cin >> n;
+    //untuk n == 2 && 3 tidak adalagi cara mungkin membagi kekelompok secara optimal,dikarenakan n adalah batas minimal
+    //sehingga solusinya n
+    //untuk n > 3 (n >= 4)sangat mungkin membagi kelompok secara optimal untuk n genap maka selisih dari partisi yang dibentuk pasti 0
+    // karena bisa dibentuk kubu dengan nilai yang sama besar
+    //sedangkan untuk ganjil pasti salah satu kubu a > b sehingga minimal selisih adalah 1
     if(n == 2)cout << 2 << endl;
     else if(n == 3)cout << 3 << endl;
     else{
