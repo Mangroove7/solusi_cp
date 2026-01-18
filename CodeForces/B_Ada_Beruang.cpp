@@ -12,8 +12,18 @@ int main() {
         cin >> i;
     }
     long long cnt = 0;
+    unordered_set <long long> seen;
     for (int i = 0; i < n; i++) {
-        if(find(a.begin(),a.end(),(d - a[i])) != a.end())cnt++;
+        long long current_num = a[i];
+        long long target = current_num - d;
+
+        
+        if (seen.count(target)) {
+            cnt++;
+        }
+        
+        
+        seen.insert(current_num);
     }
     cout << cnt << endl;
     return 0;
