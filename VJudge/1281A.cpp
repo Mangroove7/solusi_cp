@@ -3,9 +3,28 @@ using namespace std;
 
 void solve() {
     string s;cin >> s;
-    if(s.find("po") == s.size() - 2)cout << "FILIPINO\n";
-    else if(s.find("desu") == s.size() - 4 || s.find("masu") == s.size() - 4)cout << "JAPANESE\n";
-    else cout << "KOREAN\n";
+    string cek = "";
+    for (int i = s.size() - 2; i < s.size(); i++) {
+        cek += s[i];
+        if(cek == "po"){
+            cout << "FILIPINO\n";
+            return;
+        }
+    }
+    for (int i = s.size() - 4; i <= s.size(); i++) {
+        cek += s[i];
+        if(cek == "desu" || cek == "masu"){
+            cout << "JAPANESE\n";
+            return;
+        }
+    }
+    for (int i = s.size() - 5; i <= s.size(); i++) {
+        cek += s[i];
+        if(cek == "mnida"){
+            cout << "KOREAN\n";
+            return;
+        }
+    }
 }
 
 int main() {
