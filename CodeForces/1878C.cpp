@@ -7,6 +7,7 @@ void solve() {
     int sum_all = n * (n + 1) / 2;
     int sum_min = k * (k + 1) / 2;
     int sum_max = sum_all - ((n - k) * (n - k + 1) / 2);
+    //cek kondisi
     if(x >= sum_min && x <= sum_max)cout <<"YES\n";
     else cout << "NO\n";
 }
