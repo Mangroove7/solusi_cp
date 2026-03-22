@@ -3,32 +3,30 @@ using namespace std;
 
 void solve() {
     string s;cin >> s;
-    int cnt_0 = 0,cnt_1 = 0;
+    int cnt0 = 0,cnt1 = 0;
     for(auto c : s){
-        if(c == '0')cnt_0++;
-        else cnt_1++;
+        if(c == '0')cnt0++;
+        else cnt1++;
     }
     for(int i = 0;i < s.size();i++){
         if(s[i] == '0'){
-            if(cnt_1 > 0){
-                cnt_1--;
-            }else{
-                int res = s.size() - i;
-                cout << res << endl;
+            if(cnt1 > 0)cnt1--;
+            else{
+                cout << s.size() - i << '\n';
                 return;
             }
+
         }else{
-            if(cnt_0 > 0){
-                cnt_0--;
-            }
+            if(cnt0 > 0)cnt0--;
             else{
-                int res = s.size() - i;
-                cout << res << endl;
+                cout << s.size() - i << '\n';
                 return;
             }
         }
+        
+        
     }
-    cout << 0 << endl;
+    cout << 0 << '\n';
 }
 
 int main() {
