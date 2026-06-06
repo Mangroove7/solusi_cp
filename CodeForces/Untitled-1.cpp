@@ -2,7 +2,13 @@
 using namespace std;
 
 void solve() {
-    
+   long long n;cin >> n;
+   for(int k = 2;k <= 29;k++){
+    if(n % ((1LL << k) - 1) == 0){
+        cout << n / ((1LL << k) - 1) << '\n';
+        break;
+    }
+   }
 }
 
 int main() {
