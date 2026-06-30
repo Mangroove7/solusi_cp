@@ -14,9 +14,12 @@ int main() {
     if(k > n)cout << -1 << endl;
     else {
         sort(a.begin(),a.end());
-        int target = k - 1;
+        if(n != k){int target = n - k - 1;
         int hasil = a[target];
-        cout << 0 << " " << hasil << '\n';
+        cout << hasil + 1 << " " << hasil << '\n';}
+        else{
+            cout << 0 << " " << 0 << endl;
+        }
     }
 
     return 0;

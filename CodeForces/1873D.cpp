@@ -2,13 +2,16 @@
 using namespace std;
 
 void solve() {
-    int n;cin >> n;
-    vector <int> a(n);
+    int n,k;cin >> n >> k;
+    string s;cin >> s;
+    int cnt = 0;
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
-
+        if(s[i] == 'B'){
+            cnt++;
+            i += k - 1;
+        }
     }
-    (a[n - 1] >= a[0] + a[1])?cout << 1 << " " << 2 << " " << n << endl:cout << -1 << endl; 
+    cout << cnt << endl;
 }
 
 int main() {
