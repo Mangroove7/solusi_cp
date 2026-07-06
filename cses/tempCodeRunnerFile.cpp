@@ -1,27 +1,38 @@
 #include <bits/stdc++.h>
+#define int long long
+#define vi vector <int>
 using namespace std;
+// int l = 0,r = 1e9;
 
-void solve(string dna) {
-    int a = 0,c = 0,g = 0,t = 0;
-    for (auto x : dna) {
-        if (x == 'A') a++;
-        if (x == 'C') c++;
-        if (x == 'G') g++;
-        if (x == 'T') t++;
-    }
-    vector <int> d;
-    d.push_back(a);
-    d.push_back(c);
-    d.push_back(g);
-    d.push_back(t);
-    cout << max_element(d);
-}
-
-int main() {
+// bool check(int n,vi& arr,int val){
+//     int x = 0;
+//     for (int i = 0; i < n; i++) {
+//         x += abs(arr[i] - val);
+//     }
+// }
+signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    string dna;cin >> dna;
-    solve(dna);
+    int n;cin >> n;
+
+    map <int,int> p;
+    for (int i = 0; i < n; i++) {
+        int x;cin >> x;
+        p[x]++;
+    }
+    int maks = INT_MIN;
+    int x = -1;
+    for(auto const& [angka, freq] : p){
+        if(freq > maks){
+            maks = freq;
+            x = angka;
+        }
+    }
+    int sol = 0;
+    for(auto const& [angka, freq] : p){
+        sol += abs(x - angka);
+    }
+    cout << sol << endl;
     return 0;
 }
